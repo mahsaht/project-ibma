@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: "Dosis", sans-serif;
+    overflow-x: hidden;
+    background-color: #f3f4f6;
+  }
+  
+  .navbar {
+    width: 300px;
+    height: 100%;
+    background-color: #5a42d8;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20% 0 0 60%;
+    transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+  }
+  
+  .change {
+    right: 0;
+  }
+  
+  .hamburger-menu {
+    width: 35px;
+    height: 30px;
+    position: fixed;
+    top: 15px;
+    right: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  img .icon {
+    position: relative;
+  }
+  
+  #img {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+  
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: chocolate;
+    transition: all 0.8s;
+  }
+  
+  .change .line-1 {
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+  }
+  
+  .change .line-2 {
+    opacity: 0;
+  }
+  
+  .change .line-3 {
+    transform: rotateZ(45deg) translate(-8px, -6px);
+  }
+  
+  .nav-list {
+    text-align: right;
+  }
+  
+  .nav-item {
+    list-style: none;
+    margin: 25px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    font-size: 15px;
+    color: #eee;
+    font-weight: 300;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 3px 0;
+  }
+  
+  .nav-link::before,
+  .nav-link::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: chocolate;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+  }
+  
+  .nav-link::after {
+    bottom: 0;
+    transform-origin: right;
+  }
+  
+  .nav-link::before {
+    top: 0;
+    transform-origin: left;
+  }
+  
+  .nav-link:hover::before,
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* Search Box */
+  
+  .input {
+    border: 1px solid black;
+    outline: none;
+    color: black;
+  }
+  
+  .search_wrap {
+    margin: 20px 20px;
+  }
+  
+  .search_wrap .search_box {
+    position: relative;
+    width: 300px;
+    height: 52px;
+  }
+  
+  .search_wrap .search_box .input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 18px;
+    background-color: #fff;
+  }
+  
+  .search_wrap .search_box .btn {
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    background: #5a42d8;
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .search_wrap .search_box .input:hover {
+    border: 2px solid #f09158;
+  }
+  
+  .search_wrap .search_box .btn:hover {
+    background: #f09158;
+  }
+  
+  .search_wrap .search_box .btn.btn_common .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .search_wrap.search_wrap .search_box .btn {
+    left: 0;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+  
+  .search_wrap.search_wrap .search_box .input {
+    padding-left: 127px;
+    border-radius: 50px;
+  }
+  
+  /* Main */
+  
+  .section {
+    position: relative;
+  }
+  
+  .section-ii {
+    position: absolute;
+    top: 500px;
+    left: 650px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #f09158;
+    text-align: right;
+  }
+  
+  .contact {
+    position: absolute;
+    width: 850px;
+    height: 400px;
+    top: 25px;
+    left: 185px;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  
+  .fa-phone {
+    position: absolute;
+    top: 580px;
+    right: 350px;
+    width: 62px;
+    height: 62px;
+    background-color: #e0e8f6;
+    color: #3b82f6;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  #phone {
+    line-height: 60px;
+    font-size: 22px;
+  }
+  
+  .fa-phone:hover {
+    cursor: pointer;
+    background-color: #5a42d8;
+    color: #fff;
+  }
+  
+  .tamas {
+     position: absolute;
+     top: 600px;
+     left: 735px;
+     font-weight: bold;
+     font-size: 20px;
+  }
+  
+  span {
+    color: #d46520;
+  }
+  
+  .fa-phone-square {
+    position: absolute;
+    top: 700px;
+    left: 940px;
+    color:#3b82f6;
+    width: 62px;
+    height: 62px;
+    background-color: #e0e8f6;
+    text-align: center;
+    border-radius: 10px;
+  
+  } 
+  
+  .fa-phone-square:hover {
+    cursor: pointer;
+    background-color: #5a42d8;
+    color: #fff;
+    
+  }
+  
+  
+  #phone1 {
+    font-size: 35px;
+    line-height: 65px;
+  }
+  
+  .tamas1 {
+    position: absolute;
+    top: 715px;
+    left: 740px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .fa-whatsapp {
+    position: absolute;
+    top: 810px;
+    left: 940px;
+    color:#3b82f6;
+    width: 62px;
+    height: 62px;
+    background-color: #e0e8f6;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .fa-whatsapp:hover {
+    background-color: #5a42d8;
+    color: #fff;
+  }
+  
+  #whatsapp {
+    font-size: 30px;
+    line-height: 65px;
+  }
+  
+  .tamas2 {
+    position: absolute;
+    top: 828px;
+    left: 700px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  span:hover {
+    cursor: pointer;
+    color: #5a42d8;
+  }
+  
+  
